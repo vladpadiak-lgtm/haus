@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="HAUS — каталог із 40 проєктів будинків для Словаччини з орієнтовними кошторисами, матеріалами та фільтрами."
+    />
+    <meta name="theme-color" content="#173f36" />
+    <title>HAUS — 40 проєктів будинків для Словаччини</title>
+    <link rel="stylesheet" href="styles.css?v=2" />
+    <script src="script.js?v=2" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#catalog">До каталогу</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="HAUS, на головну">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 36 36" role="img">
+            <path d="M7 16.5 18 7l11 9.5V30h-8v-8h-6v8H7V16.5Z" />
+          </svg>
+        </span>
+        <span>HAUS</span>
+      </a>
+      <nav aria-label="Головна навігація">
+        <a href="#catalog">Проєкти</a>
+        <a href="#estimate">Як рахуємо</a>
+        <a href="#about">Про каталог</a>
+      </nav>
+      <a class="header-cta" href="#catalog">Знайти свій дім</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Каталог для будівництва у Словаччині</p>
+          <h1 id="hero-title">Дім, який можна<br />не лише уявити.</h1>
+          <p class="hero-lead">
+            40 продуманих варіантів із площею, технологією, матеріалами та
+            орієнтовним бюджетом будівництва.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#catalog">Дивитися проєкти</a>
+            <a class="text-link" href="#estimate">
+              Як формується ціна
+              <span aria-hidden="true">↘</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <img src="assets/houses/house-01.webp" alt="" />
+          <div class="hero-stat hero-stat-area">
+            <span>від</span>
+            <strong>68 м²</strong>
+          </div>
+          <div class="hero-stat hero-stat-price">
+            <span>бюджет від</span>
+            <strong>€128 000</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="Переваги каталогу">
+        <div>
+          <strong>40</strong>
+          <span>варіантів будинків</span>
+        </div>
+        <div>
+          <strong>€</strong>
+          <span>оцінки для Словаччини</span>
+        </div>
+        <div>
+          <strong>A0–A1</strong>
+          <span>енергоефективні рішення</span>
+        </div>
+        <div>
+          <strong>А—Я</strong>
+          <span>матеріали й етапи</span>
+        </div>
+      </section>
+
+      <section class="catalog-section" id="catalog" aria-labelledby="catalog-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Обрати проєкт</p>
+            <h2 id="catalog-title">Будинки для різного життя</h2>
+          </div>
+          <p>
+            Порівнюйте не лише фасади: дивіться на площу, конструкцію,
+            енергоефективність і повний орієнтовний бюджет.
+          </p>
+        </div>
+
+        <button class="mobile-filter-button" id="open-filters" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 7h16M7 12h10M10 17h4" />
+          </svg>
+          Фільтри та сортування
+          <span id="active-filter-count" hidden>0</span>
+        </button>
+
+        <div class="catalog-layout">
+          <div class="catalog-main">
+            <div class="catalog-toolbar">
+              <p><strong id="result-count">40</strong> проєктів знайдено</p>
+              <label class="sort-control">
+                <span>Сортування</span>
+                <select id="sort" aria-label="Сортування проєктів">
+                  <option value="recommended">Рекомендовані</option>
+                  <option value="price-asc">Ціна: від нижчої</option>
+                  <option value="price-desc">Ціна: від вищої</option>
+                  <option value="area-asc">Площа: від меншої</option>
+                  <option value="area-desc">Площа: від більшої</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="house-grid" id="house-grid" aria-live="polite"></div>
+
+            <div class="empty-state" id="empty-state" hidden>
+              <span aria-hidden="true">⌂</span>
+              <h3>Таких проєктів поки немає</h3>
+              <p>Спробуйте розширити діапазон ціни або площі.</p>
+              <button class="button button-primary" type="button" data-reset-filters>
+                Скинути фільтри
+              </button>
+            </div>
+          </div>
+
+          <aside class="filter-panel" id="filters" aria-labelledby="filters-title">
+            <div class="filter-mobile-head">
+              <h2 id="filters-title">Фільтри</h2>
+              <button class="icon-button" id="close-filters" type="button" aria-label="Закрити фільтри">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg>
+              </button>
+            </div>
+
+            <div class="filter-head desktop-only">
+              <h3>Налаштувати вибір</h3>
+              <button type="button" data-reset-filters>Скинути все</button>
+            </div>
+
+            <label class="search-field">
+              <span class="visually-hidden">Пошук за назвою</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6" /><path d="m16 16 4 4" /></svg>
+              <input id="search" type="search" placeholder="Пошук за назвою" autocomplete="off" />
+            </label>
+
+            <div class="filter-group">
+              <div class="filter-group-title">
+                <h4>Бюджет будівництва</h4>
+                <span>€</span>
+              </div>
+              <div class="dual-inputs">
+                <label>від <input id="price-min" type="number" min="100000" max="600000" step="5000" value="100000" /></label>
+                <label>до <input id="price-max" type="number" min="100000" max="600000" step="5000" value="600000" /></label>
+              </div>
+              <input id="price-range" class="range" type="range" min="100000" max="600000" step="5000" value="600000" aria-label="Максимальний бюджет" />
+            </div>
+
+            <div class="filter-group">
+              <div class="filter-group-title">
+                <h4>Площа</h4>
+                <span>м²</span>
+              </div>
+              <div class="dual-inputs">
+                <label>від <input id="area-min" type="number" min="60" max="220" step="5" value="60" /></label>
+                <label>до <input id="area-max" type="number" min="60" max="220" step="5" value="220" /></label>
+              </div>
+              <input id="area-range" class="range" type="range" min="60" max="220" step="5" value="220" aria-label="Максимальна площа" />
+            </div>
+
+            <fieldset class="filter-group">
+              <legend>Кількість кімнат</legend>
+              <div class="segmented" id="room-filters">
+                <label><input type="radio" name="rooms" value="all" checked /><span>Усі</span></label>
+                <label><input type="radio" name="rooms" value="3" /><span>3</span></label>
+                <label><input type="radio" name="rooms" value="4" /><span>4</span></label>
+                <label><input type="radio" name="rooms" value="5" /><span>5+</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="filter-group">
+              <legend>Поверховість</legend>
+              <div class="check-stack">
+                <label><input class="styled-check" type="checkbox" name="floors" value="1" /> <span>Одноповерховий</span></label>
+                <label><input class="styled-check" type="checkbox" name="floors" value="2" /> <span>Двоповерховий</span></label>
+                <label><input class="styled-check" type="checkbox" name="floors" value="3" /> <span>Три поверхи</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="filter-group">
+              <legend>Технологія</legend>
+              <div class="check-stack">
+                <label><input class="styled-check" type="checkbox" name="tech" value="Мурований" /> <span>Мурований</span></label>
+                <label><input class="styled-check" type="checkbox" name="tech" value="Каркасний" /> <span>Каркасний</span></label>
+                <label><input class="styled-check" type="checkbox" name="tech" value="CLT / модульний" /> <span>CLT / модульний</span></label>
+                <label><input class="styled-check" type="checkbox" name="tech" value="Монолітний" /> <span>Монолітний</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="filter-group">
+              <legend>Енергоклас</legend>
+              <div class="check-stack inline-checks">
+                <label><input class="styled-check" type="checkbox" name="energy" value="A0" /> <span>A0</span></label>
+                <label><input class="styled-check" type="checkbox" name="energy" value="A1" /> <span>A1</span></label>
+              </div>
+            </fieldset>
+
+            <div class="filter-mobile-actions">
+              <button class="text-button" type="button" data-reset-filters>Скинути</button>
+              <button class="button button-primary" id="apply-filters" type="button">
+                Показати <span id="mobile-result-count">40</span>
+              </button>
+            </div>
+          </aside>
+        </div>
+        <div class="filter-backdrop" id="filter-backdrop" hidden></div>
+      </section>
+
+      <section class="estimate-section" id="estimate" aria-labelledby="estimate-title">
+        <div class="estimate-intro">
+          <p class="eyebrow eyebrow-light">Прозорий орієнтир</p>
+          <h2 id="estimate-title">Що входить у ціну</h2>
+          <p>
+            Вартість у картці — це орієнтовний бюджет будинку «під ключ» у
+            Словаччині без землі, меблів і складних зовнішніх підключень.
+          </p>
+        </div>
+        <div class="estimate-steps">
+          <article>
+            <span>01</span>
+            <h3>Основа й коробка</h3>
+            <p>Проєкт, земляні роботи, фундамент, несучі стіни та перекриття.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Контур будинку</h3>
+            <p>Покрівля, вікна, двері, утеплення та зовнішній фасад.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Інженерія</h3>
+            <p>Електрика, вода, каналізація, вентиляція та тепловий насос.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Готовність до життя</h3>
+            <p>Стяжки, штукатурка, підлоги, санвузли та базове фарбування.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-section" id="about">
+        <div>
+          <p class="eyebrow">Важливо знати</p>
+          <h2>Орієнтир для першого рішення, а не фінальна оферта.</h2>
+        </div>
+        <div>
+          <p>
+            Кошторис залежить від ділянки, геології, регіону, комплектації та
+            підрядника. Перед будівництвом потрібні локальний проєкт,
+            інженерні розрахунки й комерційні пропозиції.
+          </p>
+          <p class="source-note">
+            Розрахунковий діапазон каталогу — приблизно €1 800–2 600/м².
+            Орієнтири звірено зі словацькими оцінками вартості стандартних і
+            пасивних будинків «під ключ» за 2025 рік та актуалізовано за
+            індексами цін будівельних робіт. Джерела:
+            <a href="https://www.stavbujeme.sk/kolko-stoji-postavit-rodinny-dom-v-roku-2025/" target="_blank" rel="noreferrer">Stavbujeme</a>,
+            <a href="https://gavia.sk/2025/07/16/kolko-stoji-postavit-dom-v-roku-2025/" target="_blank" rel="noreferrer">Gavia</a>,
+            <a href="https://data.europa.eu/data/datasets/https-statdata-statistics-sk-public-api-dc-opendata-cube-dataset-sp1010qs" target="_blank" rel="noreferrer">дані Статистичного управління СР</a>.
+            Актуалізація: липень 2026 року.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand brand-light" href="#top">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 36 36"><path d="M7 16.5 18 7l11 9.5V30h-8v-8h-6v8H7V16.5Z" /></svg>
+        </span>
+        <span>HAUS</span>
+      </a>
+      <p>Каталог житлових ідей для Словаччини.</p>
+      <p>© 2026 HAUS. Орієнтовні розрахунки.</p>
+    </footer>
+
+    <dialog class="house-dialog" id="house-dialog" aria-labelledby="dialog-title">
+      <button class="dialog-close" id="dialog-close" type="button" aria-label="Закрити деталі">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg>
+      </button>
+      <div id="dialog-content"></div>
+    </dialog>
+
+    <template id="house-card-template">
+      <article class="house-card">
+        <button class="card-image-button" type="button">
+          <img class="card-image" src="" alt="" loading="lazy" />
+          <span class="card-badge"></span>
+          <span class="image-arrow" aria-hidden="true">↗</span>
+        </button>
+        <div class="card-body">
+          <div class="card-title-row">
+            <div>
+              <p class="card-kicker"></p>
+              <h3 class="card-title"></h3>
+            </div>
+            <p class="card-price"></p>
+          </div>
+          <div class="card-specs"></div>
+          <button class="card-details-button" type="button">Усі деталі <span aria-hidden="true">→</span></button>
+        </div>
+      </article>
+    </template>
+  </body>
+</html>
