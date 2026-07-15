@@ -9,14 +9,15 @@
     />
     <meta name="theme-color" content="#173f36" />
     <title>HAUS — 40 проєктів будинків для Словаччини</title>
-    <link rel="stylesheet" href="styles.css?v=2" />
-    <script src="script.js?v=2" defer></script>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css?v=4" />
+    <script src="script.js?v=4" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#catalog">До каталогу</a>
+    <a class="skip-link" href="#catalog" data-i18n="skip">До каталогу</a>
 
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="HAUS, на головну">
+      <a class="brand" href="#top" aria-label="HAUS, на головну" data-i18n-aria-label="brand.homeAria">
         <span class="brand-mark" aria-hidden="true">
           <svg viewBox="0 0 36 36" role="img">
             <path d="M7 16.5 18 7l11 9.5V30h-8v-8h-6v8H7V16.5Z" />
@@ -24,27 +25,33 @@
         </span>
         <span>HAUS</span>
       </a>
-      <nav aria-label="Головна навігація">
-        <a href="#catalog">Проєкти</a>
-        <a href="#estimate">Як рахуємо</a>
-        <a href="#about">Про каталог</a>
+      <nav aria-label="Головна навігація" data-i18n-aria-label="nav.aria">
+        <a href="#catalog" data-i18n="nav.projects">Проєкти</a>
+        <a href="#estimate" data-i18n="nav.price">Як рахуємо</a>
+        <a href="#about" data-i18n="nav.about">Про каталог</a>
       </nav>
-      <a class="header-cta" href="#catalog">Знайти свій дім</a>
+      <div class="header-actions">
+        <div class="language-switcher" role="group" aria-label="Вибір мови" data-i18n-aria-label="language.aria">
+          <button type="button" data-language="uk" aria-pressed="true">UA</button>
+          <button type="button" data-language="sk" aria-pressed="false">SK</button>
+        </div>
+        <a class="header-cta" href="#catalog" data-i18n="header.cta">Знайти свій дім</a>
+      </div>
     </header>
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">Каталог для будівництва у Словаччині</p>
-          <h1 id="hero-title">Дім, який можна<br />не лише уявити.</h1>
-          <p class="hero-lead">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Каталог для будівництва у Словаччині</p>
+          <h1 id="hero-title" data-i18n-html="hero.titleHtml">Дім, який можна<br />не лише уявити.</h1>
+          <p class="hero-lead" data-i18n="hero.lead">
             40 продуманих варіантів із площею, технологією, матеріалами та
             орієнтовним бюджетом будівництва.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#catalog">Дивитися проєкти</a>
+            <a class="button button-primary" href="#catalog" data-i18n="hero.projects">Дивитися проєкти</a>
             <a class="text-link" href="#estimate">
-              Як формується ціна
+              <span data-i18n="hero.priceLink">Як формується ціна</span>
               <span aria-hidden="true">↘</span>
             </a>
           </div>
@@ -52,67 +59,67 @@
         <div class="hero-visual" aria-hidden="true">
           <img src="assets/houses/house-01.webp" alt="" />
           <div class="hero-stat hero-stat-area">
-            <span>від</span>
-            <strong>68 м²</strong>
+            <span data-i18n="common.from">від</span>
+            <strong>68 <span data-i18n="common.sqm">м²</span></strong>
           </div>
           <div class="hero-stat hero-stat-price">
-            <span>бюджет від</span>
+            <span data-i18n="hero.budgetFrom">бюджет від</span>
             <strong>€128 000</strong>
           </div>
         </div>
       </section>
 
-      <section class="trust-strip" aria-label="Переваги каталогу">
+      <section class="trust-strip" aria-label="Переваги каталогу" data-i18n-aria-label="trust.aria">
         <div>
           <strong>40</strong>
-          <span>варіантів будинків</span>
+          <span data-i18n="trust.options">варіантів будинків</span>
         </div>
         <div>
           <strong>€</strong>
-          <span>оцінки для Словаччини</span>
+          <span data-i18n="trust.estimates">оцінки для Словаччини</span>
         </div>
         <div>
           <strong>A0–A1</strong>
-          <span>енергоефективні рішення</span>
+          <span data-i18n="trust.energy">енергоефективні рішення</span>
         </div>
         <div>
-          <strong>А—Я</strong>
-          <span>матеріали й етапи</span>
+          <strong data-i18n="trust.az">А—Я</strong>
+          <span data-i18n="trust.stages">матеріали й етапи</span>
         </div>
       </section>
 
       <section class="catalog-section" id="catalog" aria-labelledby="catalog-title">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Обрати проєкт</p>
-            <h2 id="catalog-title">Будинки для різного життя</h2>
+            <p class="eyebrow" data-i18n="catalog.eyebrow">Обрати проєкт</p>
+            <h2 id="catalog-title" data-i18n="catalog.title">Будинки для різного життя</h2>
           </div>
-          <p>
+          <p data-i18n="catalog.intro">
             Порівнюйте не лише фасади: дивіться на площу, конструкцію,
             енергоефективність і повний орієнтовний бюджет.
           </p>
         </div>
 
-        <button class="mobile-filter-button" id="open-filters" type="button">
+        <button class="mobile-filter-button" id="open-filters" type="button" aria-controls="filters" aria-expanded="false">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M4 7h16M7 12h10M10 17h4" />
           </svg>
-          Фільтри та сортування
+          <span data-i18n="filters.open">Фільтри та сортування</span>
           <span id="active-filter-count" hidden>0</span>
         </button>
 
         <div class="catalog-layout">
           <div class="catalog-main">
             <div class="catalog-toolbar">
-              <p><strong id="result-count">40</strong> проєктів знайдено</p>
+              <p><strong id="result-count">40</strong> <span data-i18n="results.found">проєктів знайдено</span></p>
               <label class="sort-control">
-                <span>Сортування</span>
-                <select id="sort" aria-label="Сортування проєктів">
-                  <option value="recommended">Рекомендовані</option>
-                  <option value="price-asc">Ціна: від нижчої</option>
-                  <option value="price-desc">Ціна: від вищої</option>
-                  <option value="area-asc">Площа: від меншої</option>
-                  <option value="area-desc">Площа: від більшої</option>
+                <span data-i18n="sort.label">Сортування</span>
+                <select id="sort" aria-label="Сортування проєктів" data-i18n-aria-label="sort.aria">
+                  <option value="recommended" data-i18n="sort.recommended">Рекомендовані</option>
+                  <option value="price-asc" data-i18n="sort.priceAsc">Ціна: від нижчої</option>
+                  <option value="price-desc" data-i18n="sort.priceDesc">Ціна: від вищої</option>
+                  <option value="area-asc" data-i18n="sort.areaAsc">Площа: від меншої</option>
+                  <option value="area-desc" data-i18n="sort.areaDesc">Площа: від більшої</option>
                 </select>
               </label>
             </div>
@@ -121,61 +128,61 @@
 
             <div class="empty-state" id="empty-state" hidden>
               <span aria-hidden="true">⌂</span>
-              <h3>Таких проєктів поки немає</h3>
-              <p>Спробуйте розширити діапазон ціни або площі.</p>
+              <h3 data-i18n="empty.title">Таких проєктів поки немає</h3>
+              <p data-i18n="empty.text">Спробуйте розширити діапазон ціни або площі.</p>
               <button class="button button-primary" type="button" data-reset-filters>
-                Скинути фільтри
+                <span data-i18n="empty.reset">Скинути фільтри</span>
               </button>
             </div>
           </div>
 
           <aside class="filter-panel" id="filters" aria-labelledby="filters-title">
             <div class="filter-mobile-head">
-              <h2 id="filters-title">Фільтри</h2>
-              <button class="icon-button" id="close-filters" type="button" aria-label="Закрити фільтри">
+              <h2 id="filters-title" data-i18n="filters.title">Фільтри</h2>
+              <button class="icon-button" id="close-filters" type="button" aria-label="Закрити фільтри" data-i18n-aria-label="filters.close">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg>
               </button>
             </div>
 
             <div class="filter-head desktop-only">
-              <h3>Налаштувати вибір</h3>
-              <button type="button" data-reset-filters>Скинути все</button>
+              <h3 data-i18n="filters.setup">Налаштувати вибір</h3>
+              <button type="button" data-reset-filters data-i18n="filters.resetAll">Скинути все</button>
             </div>
 
             <label class="search-field">
-              <span class="visually-hidden">Пошук за назвою</span>
+              <span class="visually-hidden" data-i18n="filters.searchAria">Пошук за назвою або типом</span>
               <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6" /><path d="m16 16 4 4" /></svg>
-              <input id="search" type="search" placeholder="Пошук за назвою" autocomplete="off" />
+              <input id="search" type="search" placeholder="Назва, стиль або технологія" data-i18n-placeholder="filters.searchPlaceholder" autocomplete="off" />
             </label>
 
             <div class="filter-group">
               <div class="filter-group-title">
-                <h4>Бюджет будівництва</h4>
+                <h4 data-i18n="filters.budget">Бюджет будівництва</h4>
                 <span>€</span>
               </div>
               <div class="dual-inputs">
-                <label>від <input id="price-min" type="number" min="100000" max="600000" step="5000" value="100000" /></label>
-                <label>до <input id="price-max" type="number" min="100000" max="600000" step="5000" value="600000" /></label>
+                <label><span data-i18n="common.from">від</span> <input id="price-min" type="number" min="100000" max="600000" step="5000" value="100000" /></label>
+                <label><span data-i18n="common.to">до</span> <input id="price-max" type="number" min="100000" max="600000" step="5000" value="600000" /></label>
               </div>
-              <input id="price-range" class="range" type="range" min="100000" max="600000" step="5000" value="600000" aria-label="Максимальний бюджет" />
+              <input id="price-range" class="range" type="range" min="100000" max="600000" step="5000" value="600000" aria-label="Максимальний бюджет" data-i18n-aria-label="filters.maxBudget" />
             </div>
 
             <div class="filter-group">
               <div class="filter-group-title">
-                <h4>Площа</h4>
-                <span>м²</span>
+                <h4 data-i18n="filters.area">Площа</h4>
+                <span data-i18n="common.sqm">м²</span>
               </div>
               <div class="dual-inputs">
-                <label>від <input id="area-min" type="number" min="60" max="220" step="5" value="60" /></label>
-                <label>до <input id="area-max" type="number" min="60" max="220" step="5" value="220" /></label>
+                <label><span data-i18n="common.from">від</span> <input id="area-min" type="number" min="60" max="220" step="5" value="60" /></label>
+                <label><span data-i18n="common.to">до</span> <input id="area-max" type="number" min="60" max="220" step="5" value="220" /></label>
               </div>
-              <input id="area-range" class="range" type="range" min="60" max="220" step="5" value="220" aria-label="Максимальна площа" />
+              <input id="area-range" class="range" type="range" min="60" max="220" step="5" value="220" aria-label="Максимальна площа" data-i18n-aria-label="filters.maxArea" />
             </div>
 
             <fieldset class="filter-group">
-              <legend>Кількість кімнат</legend>
+              <legend data-i18n="filters.rooms">Кількість кімнат</legend>
               <div class="segmented" id="room-filters">
-                <label><input type="radio" name="rooms" value="all" checked /><span>Усі</span></label>
+                <label><input type="radio" name="rooms" value="all" checked /><span data-i18n="filters.all">Усі</span></label>
                 <label><input type="radio" name="rooms" value="3" /><span>3</span></label>
                 <label><input type="radio" name="rooms" value="4" /><span>4</span></label>
                 <label><input type="radio" name="rooms" value="5" /><span>5+</span></label>
@@ -183,26 +190,26 @@
             </fieldset>
 
             <fieldset class="filter-group">
-              <legend>Поверховість</legend>
+              <legend data-i18n="filters.floors">Поверховість</legend>
               <div class="check-stack">
-                <label><input class="styled-check" type="checkbox" name="floors" value="1" /> <span>Одноповерховий</span></label>
-                <label><input class="styled-check" type="checkbox" name="floors" value="2" /> <span>Двоповерховий</span></label>
-                <label><input class="styled-check" type="checkbox" name="floors" value="3" /> <span>Три поверхи</span></label>
+                <label><input class="styled-check" type="checkbox" name="floors" value="1" /> <span data-i18n="filters.oneFloor">Одноповерховий</span></label>
+                <label><input class="styled-check" type="checkbox" name="floors" value="2" /> <span data-i18n="filters.twoFloors">Двоповерховий</span></label>
+                <label><input class="styled-check" type="checkbox" name="floors" value="3" /> <span data-i18n="filters.threeFloors">Три поверхи</span></label>
               </div>
             </fieldset>
 
             <fieldset class="filter-group">
-              <legend>Технологія</legend>
+              <legend data-i18n="filters.tech">Технологія</legend>
               <div class="check-stack">
-                <label><input class="styled-check" type="checkbox" name="tech" value="Мурований" /> <span>Мурований</span></label>
-                <label><input class="styled-check" type="checkbox" name="tech" value="Каркасний" /> <span>Каркасний</span></label>
-                <label><input class="styled-check" type="checkbox" name="tech" value="CLT / модульний" /> <span>CLT / модульний</span></label>
-                <label><input class="styled-check" type="checkbox" name="tech" value="Монолітний" /> <span>Монолітний</span></label>
+                <label><input class="styled-check" type="checkbox" name="tech" value="Мурований" /> <span data-i18n="tech.masonry">Мурований</span></label>
+                <label><input class="styled-check" type="checkbox" name="tech" value="Каркасний" /> <span data-i18n="tech.frame">Каркасний</span></label>
+                <label><input class="styled-check" type="checkbox" name="tech" value="CLT / модульний" /> <span data-i18n="tech.modular">CLT / модульний</span></label>
+                <label><input class="styled-check" type="checkbox" name="tech" value="Монолітний" /> <span data-i18n="tech.monolithic">Монолітний</span></label>
               </div>
             </fieldset>
 
             <fieldset class="filter-group">
-              <legend>Енергоклас</legend>
+              <legend data-i18n="filters.energy">Енергоклас</legend>
               <div class="check-stack inline-checks">
                 <label><input class="styled-check" type="checkbox" name="energy" value="A0" /> <span>A0</span></label>
                 <label><input class="styled-check" type="checkbox" name="energy" value="A1" /> <span>A1</span></label>
@@ -210,9 +217,9 @@
             </fieldset>
 
             <div class="filter-mobile-actions">
-              <button class="text-button" type="button" data-reset-filters>Скинути</button>
+              <button class="text-button" type="button" data-reset-filters data-i18n="filters.reset">Скинути</button>
               <button class="button button-primary" id="apply-filters" type="button">
-                Показати <span id="mobile-result-count">40</span>
+                <span data-i18n="filters.show">Показати</span> <span id="mobile-result-count">40</span>
               </button>
             </div>
           </aside>
@@ -222,9 +229,9 @@
 
       <section class="estimate-section" id="estimate" aria-labelledby="estimate-title">
         <div class="estimate-intro">
-          <p class="eyebrow eyebrow-light">Прозорий орієнтир</p>
-          <h2 id="estimate-title">Що входить у ціну</h2>
-          <p>
+          <p class="eyebrow eyebrow-light" data-i18n="estimate.eyebrow">Прозорий орієнтир</p>
+          <h2 id="estimate-title" data-i18n="estimate.title">Що входить у ціну</h2>
+          <p data-i18n="estimate.intro">
             Вартість у картці — це орієнтовний бюджет будинку «під ключ» у
             Словаччині без землі, меблів і складних зовнішніх підключень.
           </p>
@@ -232,47 +239,44 @@
         <div class="estimate-steps">
           <article>
             <span>01</span>
-            <h3>Основа й коробка</h3>
-            <p>Проєкт, земляні роботи, фундамент, несучі стіни та перекриття.</p>
+            <h3 data-i18n="estimate.step1Title">Основа й коробка</h3>
+            <p data-i18n="estimate.step1Text">Проєкт, земляні роботи, фундамент, несучі стіни та перекриття.</p>
           </article>
           <article>
             <span>02</span>
-            <h3>Контур будинку</h3>
-            <p>Покрівля, вікна, двері, утеплення та зовнішній фасад.</p>
+            <h3 data-i18n="estimate.step2Title">Контур будинку</h3>
+            <p data-i18n="estimate.step2Text">Покрівля, вікна, двері, утеплення та зовнішній фасад.</p>
           </article>
           <article>
             <span>03</span>
-            <h3>Інженерія</h3>
-            <p>Електрика, вода, каналізація, вентиляція та тепловий насос.</p>
+            <h3 data-i18n="estimate.step3Title">Інженерія</h3>
+            <p data-i18n="estimate.step3Text">Електрика, вода, каналізація, вентиляція та тепловий насос.</p>
           </article>
           <article>
             <span>04</span>
-            <h3>Готовність до життя</h3>
-            <p>Стяжки, штукатурка, підлоги, санвузли та базове фарбування.</p>
+            <h3 data-i18n="estimate.step4Title">Готовність до життя</h3>
+            <p data-i18n="estimate.step4Text">Стяжки, штукатурка, підлоги, санвузли та базове фарбування.</p>
           </article>
         </div>
       </section>
 
       <section class="about-section" id="about">
         <div>
-          <p class="eyebrow">Важливо знати</p>
-          <h2>Орієнтир для першого рішення, а не фінальна оферта.</h2>
+          <p class="eyebrow" data-i18n="about.eyebrow">Важливо знати</p>
+          <h2 data-i18n="about.title">Орієнтир для першого рішення, а не фінальна оферта.</h2>
         </div>
         <div>
-          <p>
+          <p data-i18n="about.text">
             Кошторис залежить від ділянки, геології, регіону, комплектації та
             підрядника. Перед будівництвом потрібні локальний проєкт,
             інженерні розрахунки й комерційні пропозиції.
           </p>
           <p class="source-note">
-            Розрахунковий діапазон каталогу — приблизно €1 800–2 600/м².
-            Орієнтири звірено зі словацькими оцінками вартості стандартних і
-            пасивних будинків «під ключ» за 2025 рік та актуалізовано за
-            індексами цін будівельних робіт. Джерела:
+            <span data-i18n="about.sourceLead">Розрахунковий діапазон каталогу — приблизно €1 800–2 600/м². Орієнтири звірено зі словацькими оцінками вартості стандартних і пасивних будинків «під ключ» за 2025 рік та актуалізовано за індексами цін будівельних робіт. Джерела:</span>
             <a href="https://www.stavbujeme.sk/kolko-stoji-postavit-rodinny-dom-v-roku-2025/" target="_blank" rel="noreferrer">Stavbujeme</a>,
             <a href="https://gavia.sk/2025/07/16/kolko-stoji-postavit-dom-v-roku-2025/" target="_blank" rel="noreferrer">Gavia</a>,
-            <a href="https://data.europa.eu/data/datasets/https-statdata-statistics-sk-public-api-dc-opendata-cube-dataset-sp1010qs" target="_blank" rel="noreferrer">дані Статистичного управління СР</a>.
-            Актуалізація: липень 2026 року.
+            <a href="https://data.europa.eu/data/datasets/https-statdata-statistics-sk-public-api-dc-opendata-cube-dataset-sp1010qs" target="_blank" rel="noreferrer" data-i18n="about.statsLink">дані Статистичного управління СР</a>.
+            <span data-i18n="about.updated">Актуалізація: липень 2026 року.</span>
           </p>
         </div>
       </section>
@@ -285,12 +289,12 @@
         </span>
         <span>HAUS</span>
       </a>
-      <p>Каталог житлових ідей для Словаччини.</p>
-      <p>© 2026 HAUS. Орієнтовні розрахунки.</p>
+      <p data-i18n="footer.tagline">Каталог житлових ідей для Словаччини.</p>
+      <p data-i18n="footer.copy">© 2026 HAUS. Орієнтовні розрахунки.</p>
     </footer>
 
     <dialog class="house-dialog" id="house-dialog" aria-labelledby="dialog-title">
-      <button class="dialog-close" id="dialog-close" type="button" aria-label="Закрити деталі">
+      <button class="dialog-close" id="dialog-close" type="button" aria-label="Закрити деталі" data-i18n-aria-label="dialog.close">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg>
       </button>
       <div id="dialog-content"></div>
@@ -312,7 +316,7 @@
             <p class="card-price"></p>
           </div>
           <div class="card-specs"></div>
-          <button class="card-details-button" type="button">Усі деталі <span aria-hidden="true">→</span></button>
+          <button class="card-details-button" type="button"><span data-card-details>Усі деталі</span> <span aria-hidden="true">→</span></button>
         </div>
       </article>
     </template>
