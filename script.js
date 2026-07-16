@@ -102,6 +102,7 @@ const TRANSLATIONS = {
     "footer.tagline": "Каталог житлових ідей для Словаччини.", "footer.copy": "© 2026 HAUS. Орієнтовні розрахунки.", "dialog.close": "Закрити деталі",
     "card.details": "Усі деталі", "card.roomsShort": "кімн.", "card.floorsShort": "пов.", "card.open": "Відкрити деталі проєкту {name}", "card.alt": "{name} — {style} будинок площею {area} м²",
     "modal.project": "Проєкт", "modal.area": "Площа", "modal.rooms": "Кімнати", "modal.bedrooms": "Спальні", "modal.floors": "Поверхи", "modal.energy": "Енергоклас", "modal.duration": "Термін", "modal.idea": "Ідея будинку", "modal.ideaSuffix": "Планування передбачає чіткий поділ на денну й приватну зони, технічне приміщення, місце для зберігання та прямий зв'язок із терасою.", "modal.turnkey": "Орієнтовно під ключ", "modal.sqmNote": "≈ {price} / м² · Словаччина, липень 2026",
+    "interior.eyebrow": "Дизайн інтер’єру", "interior.title": "Як будинок виглядає всередині", "interior.intro": "Два концептуальні ракурси показують цілісну атмосферу, палітру й матеріали, підібрані спеціально до архітектури цього будинку.", "interior.living": "Денна зона", "interior.private": "Приватна кімната", "interior.altLiving": "{name} — концепт інтер’єру денної зони", "interior.altPrivate": "{name} — концепт інтер’єру приватної кімнати", "interior.disclaimer": "Візуалізації показують можливий напрям дизайну. Меблі, кухня, декор і точні оздоблювальні матеріали не входять до орієнтовної вартості будівництва.",
     "plans.sketch": "ескізний проєкт", "plans.title": "Планування від А до Я", "plans.intro": "Орієнтовне зонування кімнат і корисних площ, адаптоване до площі та поверховості цього будинку.", "plans.concept": "Концепт", "plans.floorPlan": "План поверху", "plans.floor": "{number} поверх", "plans.gross": "м² брутто", "plans.aria": "{floor} будинку {name}", "plans.north": "Пн", "plans.scale": "{width} м · концептуальний масштаб 1:100", "plans.legendAria": "Позначення зон плану", "plans.day": "Денна зона", "plans.bedrooms": "Спальні", "plans.service": "Сервісні", "plans.passage": "Проходи", "plans.flex": "Гнучкі кімнати", "plans.footprintSize": "Габарит плями", "plans.footprintArea": "Площа забудови", "plans.minPlot": "Мін. ширина ділянки", "plans.terrace": "Тераса", "plans.orientation": "Краща орієнтація", "plans.disclaimer": "Це ескізна схема для порівняння варіантів. Для будівництва її потрібно адаптувати до ділянки, норм Словаччини, конструктивних розрахунків та інженерних мереж.",
     "room.living": "Кухня-вітальня", "room.entry": "Передпокій", "room.utility": "Технічна", "room.toilet": "Санвузол", "room.pantry": "Комора", "room.office": "Кабінет", "room.guest": "Гостьова", "room.hall": "Хол", "room.bath": "Ванна", "room.wardrobe": "Гардероб", "room.studio": "Студія", "room.bedroom": "Спальня {number}", "room.workshop": "Майстерня", "room.dayShort": "Денна зона", "room.entryShort": "Вхід",
     "materials.title": "З чого будуємо", "materials.tech": "Технологія", "materials.foundation": "Фундамент", "materials.walls": "Несучі стіни", "materials.insulation": "Утеплення", "materials.facade": "Фасад", "materials.roof": "Покрівля", "materials.heating": "Опалення",
@@ -125,6 +126,7 @@ const TRANSLATIONS = {
     "footer.tagline": "Katalóg nápadov na bývanie pre Slovensko.", "footer.copy": "© 2026 HAUS. Orientačné výpočty.", "dialog.close": "Zavrieť detail",
     "card.details": "Všetky detaily", "card.roomsShort": "izb.", "card.floorsShort": "podl.", "card.open": "Otvoriť detail projektu {name}", "card.alt": "{name} — {style} dom s plochou {area} m²",
     "modal.project": "Projekt", "modal.area": "Plocha", "modal.rooms": "Izby", "modal.bedrooms": "Spálne", "modal.floors": "Podlažia", "modal.energy": "Energetická trieda", "modal.duration": "Trvanie", "modal.idea": "Myšlienka domu", "modal.ideaSuffix": "Dispozícia jasne oddeľuje dennú a súkromnú zónu, obsahuje technickú miestnosť, úložný priestor a priame prepojenie s terasou.", "modal.turnkey": "Orientačne na kľúč", "modal.sqmNote": "≈ {price} / m² · Slovensko, júl 2026",
+    "interior.eyebrow": "Dizajn interiéru", "interior.title": "Ako môže dom vyzerať zvnútra", "interior.intro": "Dva koncepčné pohľady ukazujú jednotnú atmosféru, paletu a materiály vybrané osobitne pre architektúru tohto domu.", "interior.living": "Denná zóna", "interior.private": "Súkromná izba", "interior.altLiving": "{name} — koncepcia interiéru dennej zóny", "interior.altPrivate": "{name} — koncepcia interiéru súkromnej izby", "interior.disclaimer": "Vizualizácie ukazujú možný smer interiérového dizajnu. Nábytok, kuchyňa, dekorácie a konkrétne povrchové materiály nie sú zahrnuté v orientačnej cene výstavby.",
     "plans.sketch": "koncepčný projekt", "plans.title": "Dispozícia od A po Z", "plans.intro": "Orientačné zónovanie miestností a úžitkových plôch prispôsobené veľkosti a počtu podlaží tohto domu.", "plans.concept": "Koncept", "plans.floorPlan": "Pôdorys podlažia", "plans.floor": "{number}. podlažie", "plans.gross": "m² brutto", "plans.aria": "{floor} domu {name}", "plans.north": "S", "plans.scale": "{width} m · koncepčná mierka 1:100", "plans.legendAria": "Legenda zón pôdorysu", "plans.day": "Denná zóna", "plans.bedrooms": "Spálne", "plans.service": "Servisné", "plans.passage": "Komunikácie", "plans.flex": "Flexibilné izby", "plans.footprintSize": "Rozmery pôdorysu", "plans.footprintArea": "Zastavaná plocha", "plans.minPlot": "Min. šírka pozemku", "plans.terrace": "Terasa", "plans.orientation": "Najlepšia orientácia", "plans.disclaimer": "Ide o koncepčnú schému na porovnanie variantov. Pred výstavbou ju treba prispôsobiť pozemku, slovenským normám, statickým výpočtom a inžinierskym sieťam.",
     "room.living": "Kuchyňa a obývačka", "room.entry": "Zádverie", "room.utility": "Technická miestnosť", "room.toilet": "WC", "room.pantry": "Komora", "room.office": "Pracovňa", "room.guest": "Hosťovská izba", "room.hall": "Hala", "room.bath": "Kúpeľňa", "room.wardrobe": "Šatník", "room.studio": "Ateliér", "room.bedroom": "Spálňa {number}", "room.workshop": "Dielňa", "room.dayShort": "Denná zóna", "room.entryShort": "Vstup",
     "materials.title": "Z čoho staviame", "materials.tech": "Technológia", "materials.foundation": "Základy", "materials.walls": "Nosné steny", "materials.insulation": "Zateplenie", "materials.facade": "Fasáda", "materials.roof": "Strecha", "materials.heating": "Vykurovanie",
@@ -239,6 +241,7 @@ const houses = RAW_HOUSES.map((item, index) => {
       sk: { name: nameSk, style: styleSk, tag: tagSk, description: descriptionSk },
     },
     image: `assets/houses/house-${String(index + 1).padStart(2, "0")}.webp`,
+    interiorImage: `assets/interiors/interior-${String(index + 1).padStart(2, "0")}.webp`,
     alt: `${name} — ${style.toLowerCase()} будинок площею ${area} м²`,
     foundation: materials.foundation,
     walls: materials.walls,
@@ -480,6 +483,33 @@ function renderProjectPlans(house) {
     </section>`;
 }
 
+function renderInteriorGallery(house) {
+  const localized = localizedHouse(house);
+  return `
+    <section class="dialog-section interior-section">
+      <div class="interior-head">
+        <p class="project-code">${t("interior.eyebrow")}</p>
+        <h3>${t("interior.title")}</h3>
+        <p>${t("interior.intro")}</p>
+      </div>
+      <div class="interior-gallery">
+        <figure class="interior-shot interior-shot-left">
+          <div class="interior-crop">
+            <img src="${house.interiorImage}" alt="${t("interior.altLiving", { name: localized.name })}" loading="lazy" />
+          </div>
+          <figcaption><span>01</span>${t("interior.living")}</figcaption>
+        </figure>
+        <figure class="interior-shot interior-shot-right">
+          <div class="interior-crop">
+            <img src="${house.interiorImage}" alt="${t("interior.altPrivate", { name: localized.name })}" loading="lazy" />
+          </div>
+          <figcaption><span>02</span>${t("interior.private")}</figcaption>
+        </figure>
+      </div>
+      <p class="interior-disclaimer">${t("interior.disclaimer")}</p>
+    </section>`;
+}
+
 const grid = document.querySelector("#house-grid");
 const template = document.querySelector("#house-card-template");
 const resultCount = document.querySelector("#result-count");
@@ -660,6 +690,8 @@ function openHouse(house) {
           <small>${t("modal.sqmNote", { price: formatEuro(pricePerSquare) })}</small>
         </div>
       </div>
+
+      ${renderInteriorGallery(house)}
 
       ${renderProjectPlans(house)}
 
